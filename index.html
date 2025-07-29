@@ -1,0 +1,1521 @@
+<html lang="pt_BR">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/graphviz.svg.css" />
+    <meta charset="UTF-8" />
+    <style>
+      #instructions {
+        color: #000000;
+        position: absolute;
+        z-index: 100;
+        bottom: 0px;
+        left: 0px;
+      }
+      .highlighted polygon {
+        stroke: #ff9800 !important;
+        stroke-width: 4 !important;
+        fill: #fff3e0 !important;
+      }
+      .dimmed {
+        opacity: 0.2 !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h6 id="instructions">
+      Clique em um nó para destacar as disciplinas sucessores e predecessoras;
+      Pressione ESC para remover o destaque.
+    </h6>
+    <div
+      id="graph"
+      style="
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
+        background: transparent;
+      "
+      class="graphviz-svg"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="100%"
+        height="100%"
+        viewBox="0.00 0.00 1262.00 870.00"
+      >
+        <g
+          id="graph0"
+          class="graph"
+          transform="scale(1 1) rotate(0) translate(36 834)"
+          data-name="ADS_IFSC_SJE"
+        >
+          <polygon
+            fill="transparent"
+            stroke="transparent"
+            points="-36,36 -36,-834 1226,-834 1226,36 -36,36"
+          ></polygon>
+          <text
+            text-anchor="middle"
+            x="595"
+            y="-774"
+            font-family="Times,serif"
+            font-size="25.00"
+            fill="#000000"
+          >
+            Tecnologia em Análise e Desenvolvimento de Sistemas
+          </text>
+          <text
+            text-anchor="middle"
+            x="595"
+            y="-746"
+            font-family="Times,serif"
+            font-size="25.00"
+            fill="#000000"
+          >
+            Carga horária TOTAL: 2000
+          </text>
+          <g id="clust31" class="cluster">
+            <title>cluster_fase2</title>
+            <path
+              fill="#e6e6e6"
+              stroke="lightgrey"
+              d="M307,-464C307,-464 769,-464 769,-464 775,-464 781,-470 781,-476 781,-476 781,-562 781,-562 781,-568 775,-574 769,-574 769,-574 307,-574 307,-574 301,-574 295,-568 295,-562 295,-562 295,-476 295,-476 295,-470 301,-464 307,-464"
+            ></path>
+            <text
+              text-anchor="middle"
+              x="538"
+              y="-550"
+              font-family="Times,serif"
+              font-size="25.00"
+              fill="#000000"
+            >
+              Fase 2 [400 h] - 20 h/semana - 6 UCs
+            </text>
+          </g>
+          <g id="clust32" class="cluster">
+            <title>cluster_optativas</title>
+            <path
+              fill="#f6f6f6"
+              stroke="lightgrey"
+              d="M685,-8C685,-8 1170,-8 1170,-8 1176,-8 1182,-14 1182,-20 1182,-20 1182,-106 1182,-106 1182,-112 1176,-118 1170,-118 1170,-118 685,-118 685,-118 679,-118 673,-112 673,-106 673,-106 673,-20 673,-20 673,-14 679,-8 685,-8"
+            ></path>
+            <text
+              text-anchor="middle"
+              x="927.5"
+              y="-94"
+              font-family="Times,serif"
+              font-size="25.00"
+              fill="#000000"
+            >
+              Optativas [120 h] - 6 h/semana - 3 UCs
+            </text>
+          </g>
+          <g id="clust33" class="cluster">
+            <title>cluster_fase1</title>
+            <path
+              fill="#e6e6e6"
+              stroke="lightgrey"
+              d="M390,-616C390,-616 852,-616 852,-616 858,-616 864,-622 864,-628 864,-628 864,-714 864,-714 864,-720 858,-726 852,-726 852,-726 390,-726 390,-726 384,-726 378,-720 378,-714 378,-714 378,-628 378,-628 378,-622 384,-616 390,-616"
+            ></path>
+            <text
+              text-anchor="middle"
+              x="621"
+              y="-702"
+              font-family="Times,serif"
+              font-size="25.00"
+              fill="#000000"
+            >
+              Fase 1 [400 h] - 20 h/semana - 6 UCs
+            </text>
+          </g>
+          <g id="clust34" class="cluster">
+            <title>cluster_fase3</title>
+            <path
+              fill="#e6e6e6"
+              stroke="lightgrey"
+              d="M200,-312C200,-312 662,-312 662,-312 668,-312 674,-318 674,-324 674,-324 674,-410 674,-410 674,-416 668,-422 662,-422 662,-422 200,-422 200,-422 194,-422 188,-416 188,-410 188,-410 188,-324 188,-324 188,-318 194,-312 200,-312"
+            ></path>
+            <text
+              text-anchor="middle"
+              x="431"
+              y="-398"
+              font-family="Times,serif"
+              font-size="25.00"
+              fill="#000000"
+            >
+              Fase 3 [400 h] - 20 h/semana - 5 UCs
+            </text>
+          </g>
+          <g id="clust35" class="cluster">
+            <title>cluster_fase4</title>
+            <path
+              fill="#e6e6e6"
+              stroke="lightgrey"
+              d="M366,-160C366,-160 828,-160 828,-160 834,-160 840,-166 840,-172 840,-172 840,-258 840,-258 840,-264 834,-270 828,-270 828,-270 366,-270 366,-270 360,-270 354,-264 354,-258 354,-258 354,-172 354,-172 354,-166 360,-160 366,-160"
+            ></path>
+            <text
+              text-anchor="middle"
+              x="597"
+              y="-246"
+              font-family="Times,serif"
+              font-size="25.00"
+              fill="#000000"
+            >
+              Fase 4 [400 h] - 20 h/semana - 5 UCs
+            </text>
+          </g>
+          <g id="clust36" class="cluster">
+            <title>cluster_fase5</title>
+            <path
+              fill="#e6e6e6"
+              stroke="lightgrey"
+              d="M20,-8C20,-8 482,-8 482,-8 488,-8 494,-14 494,-20 494,-20 494,-106 494,-106 494,-112 488,-118 482,-118 482,-118 20,-118 20,-118 14,-118 8,-112 8,-106 8,-106 8,-20 8,-20 8,-14 14,-8 20,-8"
+            ></path>
+            <text
+              text-anchor="middle"
+              x="251"
+              y="-94"
+              font-family="Times,serif"
+              font-size="25.00"
+              fill="#000000"
+            >
+              Fase 5 [400 h] - 20 h/semana - 5 UCs
+            </text>
+          </g>
+          <!-- FDM -->
+          <g id="FDM" class="node" data-name="FDM">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="519.9375,-677.9375 470.0625,-677.9375 470.0625,-628.0625 519.9375,-628.0625 519.9375,-677.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="495"
+              y="-656.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              FDM
+            </text>
+            <text
+              text-anchor="middle"
+              x="495"
+              y="-641.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (4)
+            </text>
+          </g>
+          <!-- EST -->
+          <g id="EST" class="node" data-name="EST">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="439.9375,-525.9375 390.0625,-525.9375 390.0625,-476.0625 439.9375,-476.0625 439.9375,-525.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="415"
+              y="-504.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              EST
+            </text>
+            <text
+              text-anchor="middle"
+              x="415"
+              y="-489.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (4)
+            </text>
+          </g>
+          <!-- FDM&#45;&gt;EST -->
+          <g id="edge5" class="edge" data-name="FDM-&gt;EST">
+            <path
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              d="M479.95,-623.79C467.16,-599.8 448.69,-565.18 434.72,-538.97"
+            ></path>
+            <polygon
+              fill="#000000"
+              stroke="#000000"
+              stroke-width="2"
+              points="437.77,-537.26 429.98,-530.09 431.6,-540.56 437.77,-537.26"
+            ></polygon>
+          </g>
+          <!-- ALG -->
+          <g id="ALG" class="node" data-name="ALG">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="679.9375,-677.9375 630.0625,-677.9375 630.0625,-628.0625 679.9375,-628.0625 679.9375,-677.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="655"
+              y="-656.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              ALG
+            </text>
+            <text
+              text-anchor="middle"
+              x="655"
+              y="-641.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (4)
+            </text>
+          </g>
+          <!-- POO -->
+          <g id="POO" class="node" data-name="POO">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="599.9375,-525.9375 550.0625,-525.9375 550.0625,-476.0625 599.9375,-476.0625 599.9375,-525.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="575"
+              y="-504.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              POO
+            </text>
+            <text
+              text-anchor="middle"
+              x="575"
+              y="-489.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (4)
+            </text>
+          </g>
+          <!-- ALG&#45;&gt;POO -->
+          <g id="edge2" class="edge" data-name="ALG-&gt;POO">
+            <path
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              d="M639.95,-623.79C627.16,-599.8 608.69,-565.18 594.72,-538.97"
+            ></path>
+            <polygon
+              fill="#000000"
+              stroke="#000000"
+              stroke-width="2"
+              points="597.77,-537.26 589.98,-530.09 591.6,-540.56 597.77,-537.26"
+            ></polygon>
+          </g>
+          <!-- FE1 -->
+          <g id="FE1" class="node" data-name="FE1">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="679.9375,-525.9375 630.0625,-525.9375 630.0625,-476.0625 679.9375,-476.0625 679.9375,-525.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="655"
+              y="-504.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              FE1
+            </text>
+            <text
+              text-anchor="middle"
+              x="655"
+              y="-489.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (4)
+            </text>
+          </g>
+          <!-- ALG&#45;&gt;FE1 -->
+          <g id="edge1" class="edge" data-name="ALG-&gt;FE1">
+            <path
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              d="M655,-623.79C655,-600.22 655,-566.38 655,-540.35"
+            ></path>
+            <polygon
+              fill="#000000"
+              stroke="#000000"
+              stroke-width="2"
+              points="658.5,-540.09 655,-530.09 651.5,-540.09 658.5,-540.09"
+            ></polygon>
+          </g>
+          <!-- SEG -->
+          <g id="SEG" class="node" data-name="SEG">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="276.9375,-373.9375 227.0625,-373.9375 227.0625,-324.0625 276.9375,-324.0625 276.9375,-373.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="252"
+              y="-352.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              SEG
+            </text>
+            <text
+              text-anchor="middle"
+              x="252"
+              y="-337.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (4)
+            </text>
+          </g>
+          <!-- ALG&#45;&gt;SEG -->
+          <g id="edge3" class="edge" data-name="ALG-&gt;SEG">
+            <path
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              d="M627.69,-623.72C623.69,-620.72 619.41,-618.03 615,-616 548.83,-585.6 342.5,-624.47 290,-574 264.03,-549.04 255.78,-445.69 253.18,-388.5"
+            ></path>
+            <polygon
+              fill="#000000"
+              stroke="#000000"
+              stroke-width="2"
+              points="256.67,-388.23 252.75,-378.39 249.67,-388.52 256.67,-388.23"
+            ></polygon>
+          </g>
+          <!-- ICO -->
+          <g id="ICO" class="node" data-name="ICO">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="599.9375,-677.9375 550.0625,-677.9375 550.0625,-628.0625 599.9375,-628.0625 599.9375,-677.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="575"
+              y="-656.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              ICO
+            </text>
+            <text
+              text-anchor="middle"
+              x="575"
+              y="-641.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (4)
+            </text>
+          </g>
+          <!-- ICO&#45;&gt;POO -->
+          <g id="edge7" class="edge" data-name="ICO-&gt;POO">
+            <path
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              d="M575,-623.79C575,-600.22 575,-566.38 575,-540.35"
+            ></path>
+            <polygon
+              fill="#000000"
+              stroke="#000000"
+              stroke-width="2"
+              points="578.5,-540.09 575,-530.09 571.5,-540.09 578.5,-540.09"
+            ></polygon>
+          </g>
+          <!-- ICO&#45;&gt;FE1 -->
+          <g id="edge6" class="edge" data-name="ICO-&gt;FE1">
+            <path
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              d="M590.05,-623.79C602.84,-599.8 621.31,-565.18 635.28,-538.97"
+            ></path>
+            <polygon
+              fill="#000000"
+              stroke="#000000"
+              stroke-width="2"
+              points="638.4,-540.56 640.02,-530.09 632.23,-537.26 638.4,-540.56"
+            ></polygon>
+          </g>
+          <!-- ICO&#45;&gt;SEG -->
+          <g id="edge8" class="edge" data-name="ICO-&gt;SEG">
+            <path
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              d="M547.65,-623.8C543.65,-620.79 539.39,-618.07 535,-616 421.19,-562.3 337.75,-668.8 255,-574 210.26,-522.74 225.27,-436.93 239.26,-387.73"
+            ></path>
+            <polygon
+              fill="#000000"
+              stroke="#000000"
+              stroke-width="2"
+              points="242.62,-388.69 242.11,-378.11 235.91,-386.7 242.62,-388.69"
+            ></polygon>
+          </g>
+          <!-- ES1 -->
+          <g id="ES1" class="node" data-name="ES1">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="495.9375,-373.9375 446.0625,-373.9375 446.0625,-324.0625 495.9375,-324.0625 495.9375,-373.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="471"
+              y="-352.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              ES1
+            </text>
+            <text
+              text-anchor="middle"
+              x="471"
+              y="-337.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (4)
+            </text>
+          </g>
+          <!-- POO&#45;&gt;ES1 -->
+          <g id="edge16" class="edge" data-name="POO-&gt;ES1">
+            <path
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              d="M549.7,-471.7C537.37,-457.3 522.72,-439.24 511,-422 503.51,-410.99 496.18,-398.46 489.88,-386.98"
+            ></path>
+            <polygon
+              fill="#000000"
+              stroke="#000000"
+              stroke-width="2"
+              points="492.89,-385.19 485.07,-378.05 486.73,-388.51 492.89,-385.19"
+            ></polygon>
+          </g>
+          <!-- BCD -->
+          <g id="BCD" class="node" data-name="BCD">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="415.9375,-373.9375 366.0625,-373.9375 366.0625,-324.0625 415.9375,-324.0625 415.9375,-373.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="391"
+              y="-352.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              BCD
+            </text>
+            <text
+              text-anchor="middle"
+              x="391"
+              y="-337.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (4)
+            </text>
+          </g>
+          <!-- POO&#45;&gt;BCD -->
+          <g id="edge15" class="edge" data-name="POO-&gt;BCD">
+            <path
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              d="M545.77,-471.67C542.27,-468.9 538.65,-466.28 535,-464 492.72,-437.59 468.35,-455.01 431,-422 420.41,-412.64 412.04,-399.78 405.75,-387.52"
+            ></path>
+            <polygon
+              fill="#000000"
+              stroke="#000000"
+              stroke-width="2"
+              points="408.82,-385.83 401.34,-378.32 402.51,-388.85 408.82,-385.83"
+            ></polygon>
+          </g>
+          <!-- ESD -->
+          <g id="ESD" class="node" data-name="ESD">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="655.9375,-373.9375 606.0625,-373.9375 606.0625,-324.0625 655.9375,-324.0625 655.9375,-373.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="631"
+              y="-352.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              ESD
+            </text>
+            <text
+              text-anchor="middle"
+              x="631"
+              y="-337.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (4)
+            </text>
+          </g>
+          <!-- POO&#45;&gt;ESD -->
+          <g id="edge17" class="edge" data-name="POO-&gt;ESD">
+            <path
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              d="M585.53,-471.79C594.41,-448.01 607.19,-413.78 616.94,-387.66"
+            ></path>
+            <polygon
+              fill="#000000"
+              stroke="#000000"
+              stroke-width="2"
+              points="620.3,-388.68 620.51,-378.09 613.74,-386.23 620.3,-388.68"
+            ></polygon>
+          </g>
+          <!-- FE2 -->
+          <g id="FE2" class="node" data-name="FE2">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="575.9375,-373.9375 526.0625,-373.9375 526.0625,-324.0625 575.9375,-324.0625 575.9375,-373.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="551"
+              y="-352.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              FE2
+            </text>
+            <text
+              text-anchor="middle"
+              x="551"
+              y="-337.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (4)
+            </text>
+          </g>
+          <!-- FE1&#45;&gt;FE2 -->
+          <g id="edge12" class="edge" data-name="FE1-&gt;FE2">
+            <path
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              d="M629.7,-471.7C617.37,-457.3 602.72,-439.24 591,-422 583.51,-410.99 576.18,-398.46 569.88,-386.98"
+            ></path>
+            <polygon
+              fill="#000000"
+              stroke="#000000"
+              stroke-width="2"
+              points="572.89,-385.19 565.07,-378.05 566.73,-388.51 572.89,-385.19"
+            ></polygon>
+          </g>
+          <!-- PBE -->
+          <g id="PBE" class="node" data-name="PBE">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="495.9375,-221.9375 446.0625,-221.9375 446.0625,-172.0625 495.9375,-172.0625 495.9375,-221.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="471"
+              y="-200.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              PBE
+            </text>
+            <text
+              text-anchor="middle"
+              x="471"
+              y="-185.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (4)
+            </text>
+          </g>
+          <!-- FE1&#45;&gt;PBE -->
+          <g id="edge14" class="edge" data-name="FE1-&gt;PBE">
+            <path
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              d="M669.81,-471.81C688.53,-431.84 714.19,-358.42 678,-312 630.94,-251.64 571.69,-316.62 511,-270 499.61,-261.25 491.01,-248.29 484.75,-235.77"
+            ></path>
+            <polygon
+              fill="#000000"
+              stroke="#000000"
+              stroke-width="2"
+              points="487.78,-233.97 480.42,-226.35 481.42,-236.9 487.78,-233.97"
+            ></polygon>
+          </g>
+          <!-- IHC -->
+          <g id="IHC" class="node" data-name="IHC">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="747.9375,-221.9375 698.0625,-221.9375 698.0625,-172.0625 747.9375,-172.0625 747.9375,-221.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="723"
+              y="-200.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              IHC
+            </text>
+            <text
+              text-anchor="middle"
+              x="723"
+              y="-185.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (4)
+            </text>
+          </g>
+          <!-- FE1&#45;&gt;IHC -->
+          <g id="edge13" class="edge" data-name="FE1-&gt;IHC">
+            <path
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              d="M681.17,-471.9C692.49,-457.97 704.59,-440.24 711,-422 732.87,-359.8 731.06,-281.89 727.33,-236.26"
+            ></path>
+            <polygon
+              fill="#000000"
+              stroke="#000000"
+              stroke-width="2"
+              points="730.81,-235.86 726.43,-226.21 723.83,-236.48 730.81,-235.86"
+            ></polygon>
+          </g>
+          <!-- AE1 -->
+          <g id="AE1" class="node" data-name="AE1">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="764.9375,-525.9375 715.0625,-525.9375 715.0625,-476.0625 764.9375,-476.0625 764.9375,-525.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="740"
+              y="-504.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              AE1
+            </text>
+            <text
+              text-anchor="middle"
+              x="740"
+              y="-489.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (2)
+            </text>
+          </g>
+          <!-- AE2 -->
+          <g id="AE2" class="node" data-name="AE2">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="575.9375,-221.9375 526.0625,-221.9375 526.0625,-172.0625 575.9375,-172.0625 575.9375,-221.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="551"
+              y="-200.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              AE2
+            </text>
+            <text
+              text-anchor="middle"
+              x="551"
+              y="-185.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (4)
+            </text>
+          </g>
+          <!-- AE1&#45;&gt;AE2 -->
+          <g id="edge10" class="edge" data-name="AE1-&gt;AE2">
+            <path
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              d="M740.76,-471.91C740.52,-433.03 735.32,-361.98 704,-312 676.31,-267.81 624.81,-234.86 589.26,-216.03"
+            ></path>
+            <polygon
+              fill="#000000"
+              stroke="#000000"
+              stroke-width="2"
+              points="590.64,-212.8 580.14,-211.33 587.43,-219.02 590.64,-212.8"
+            ></polygon>
+          </g>
+          <!-- ES1&#45;&gt;AE2 -->
+          <g id="edge22" class="edge" data-name="ES1-&gt;AE2">
+            <path
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              d="M486.05,-319.79C498.84,-295.8 517.31,-261.18 531.28,-234.97"
+            ></path>
+            <polygon
+              fill="#000000"
+              stroke="#000000"
+              stroke-width="2"
+              points="534.4,-236.56 536.02,-226.09 528.23,-233.26 534.4,-236.56"
+            ></polygon>
+          </g>
+          <!-- ES2 -->
+          <g id="ES2" class="node" data-name="ES2">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="415.9375,-221.9375 366.0625,-221.9375 366.0625,-172.0625 415.9375,-172.0625 415.9375,-221.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="391"
+              y="-200.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              ES2
+            </text>
+            <text
+              text-anchor="middle"
+              x="391"
+              y="-185.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (4)
+            </text>
+          </g>
+          <!-- ES1&#45;&gt;ES2 -->
+          <g id="edge23" class="edge" data-name="ES1-&gt;ES2">
+            <path
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              d="M455.95,-319.79C443.16,-295.8 424.69,-261.18 410.72,-234.97"
+            ></path>
+            <polygon
+              fill="#000000"
+              stroke="#000000"
+              stroke-width="2"
+              points="413.77,-233.26 405.98,-226.09 407.6,-236.56 413.77,-233.26"
+            ></polygon>
+          </g>
+          <!-- MOV -->
+          <g id="MOV" class="node" data-name="MOV">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="235.9375,-69.9375 186.0625,-69.9375 186.0625,-20.0625 235.9375,-20.0625 235.9375,-69.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="211"
+              y="-48.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              MOV
+            </text>
+            <text
+              text-anchor="middle"
+              x="211"
+              y="-33.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (4)
+            </text>
+          </g>
+          <!-- ES1&#45;&gt;MOV -->
+          <g id="edge24" class="edge" data-name="ES1-&gt;MOV">
+            <path
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              d="M441.56,-319.99C438.1,-317.16 434.54,-314.44 431,-312 397.28,-288.78 379.07,-297.79 349,-270 290.63,-216.05 247.85,-131.95 226.44,-83.61"
+            ></path>
+            <polygon
+              fill="#000000"
+              stroke="#000000"
+              stroke-width="2"
+              points="229.52,-81.92 222.32,-74.15 223.1,-84.72 229.52,-81.92"
+            ></polygon>
+          </g>
+          <!-- FE2&#45;&gt;AE2 -->
+          <g id="edge26" class="edge" data-name="FE2-&gt;AE2">
+            <path
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              d="M551,-319.79C551,-296.22 551,-262.38 551,-236.35"
+            ></path>
+            <polygon
+              fill="#000000"
+              stroke="#000000"
+              stroke-width="2"
+              points="554.5,-236.09 551,-226.09 547.5,-236.09 554.5,-236.09"
+            ></polygon>
+          </g>
+          <!-- BCD&#45;&gt;PBE -->
+          <g id="edge20" class="edge" data-name="BCD-&gt;PBE">
+            <path
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              d="M406.05,-319.79C418.84,-295.8 437.31,-261.18 451.28,-234.97"
+            ></path>
+            <polygon
+              fill="#000000"
+              stroke="#000000"
+              stroke-width="2"
+              points="454.4,-236.56 456.02,-226.09 448.23,-233.26 454.4,-236.56"
+            ></polygon>
+          </g>
+          <!-- BCD&#45;&gt;ES2 -->
+          <g id="edge19" class="edge" data-name="BCD-&gt;ES2">
+            <path
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              d="M391,-319.79C391,-296.22 391,-262.38 391,-236.35"
+            ></path>
+            <polygon
+              fill="#000000"
+              stroke="#000000"
+              stroke-width="2"
+              points="394.5,-236.09 391,-226.09 387.5,-236.09 394.5,-236.09"
+            ></polygon>
+          </g>
+          <!-- BCD&#45;&gt;MOV -->
+          <g id="edge21" class="edge" data-name="BCD-&gt;MOV">
+            <path
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              d="M361.6,-337.17C308.56,-317.48 201.88,-277.22 197,-270 159.32,-214.24 178.86,-131.76 195.55,-83.99"
+            ></path>
+            <polygon
+              fill="#000000"
+              stroke="#000000"
+              stroke-width="2"
+              points="198.93,-84.94 199.05,-74.35 192.35,-82.56 198.93,-84.94"
+            ></polygon>
+          </g>
+          <!-- AOC -->
+          <g id="AOC" class="node" data-name="AOC">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="771.9375,-677.9375 722.0625,-677.9375 722.0625,-628.0625 771.9375,-628.0625 771.9375,-677.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="747"
+              y="-656.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              AOC
+            </text>
+            <text
+              text-anchor="middle"
+              x="747"
+              y="-641.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (4)
+            </text>
+          </g>
+          <!-- SOP -->
+          <g id="SOP" class="node" data-name="SOP">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="827.9375,-221.9375 778.0625,-221.9375 778.0625,-172.0625 827.9375,-172.0625 827.9375,-221.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="803"
+              y="-200.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              SOP
+            </text>
+            <text
+              text-anchor="middle"
+              x="803"
+              y="-185.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (4)
+            </text>
+          </g>
+          <!-- AOC&#45;&gt;SOP -->
+          <g id="edge4" class="edge" data-name="AOC-&gt;SOP">
+            <path
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              d="M764.66,-623.87C772.72,-609.52 781.47,-591.44 786,-574 817.14,-454.24 811.51,-305.92 806.47,-236.82"
+            ></path>
+            <polygon
+              fill="#000000"
+              stroke="#000000"
+              stroke-width="2"
+              points="809.93,-236.13 805.68,-226.42 802.95,-236.66 809.93,-236.13"
+            ></polygon>
+          </g>
+          <!-- ESD&#45;&gt;SOP -->
+          <g id="edge25" class="edge" data-name="ESD-&gt;SOP">
+            <path
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              d="M660.23,-336.19C689.15,-323.35 733.29,-300.51 763,-270 772.7,-260.04 780.8,-247.26 787.12,-235.24"
+            ></path>
+            <polygon
+              fill="#000000"
+              stroke="#000000"
+              stroke-width="2"
+              points="790.27,-236.77 791.6,-226.26 784,-233.64 790.27,-236.77"
+            ></polygon>
+          </g>
+          <!-- AE3 -->
+          <g id="AE3" class="node" data-name="AE3">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="481.9375,-69.9375 432.0625,-69.9375 432.0625,-20.0625 481.9375,-20.0625 481.9375,-69.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="457"
+              y="-48.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              AE3
+            </text>
+            <text
+              text-anchor="middle"
+              x="457"
+              y="-33.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (4)
+            </text>
+          </g>
+          <!-- AE2&#45;&gt;AE3 -->
+          <g id="edge27" class="edge" data-name="AE2-&gt;AE3">
+            <path
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              d="M533.32,-167.79C518.22,-143.69 496.4,-108.87 479.95,-82.63"
+            ></path>
+            <polygon
+              fill="#000000"
+              stroke="#000000"
+              stroke-width="2"
+              points="482.88,-80.7 474.6,-74.09 476.95,-84.42 482.88,-80.7"
+            ></polygon>
+          </g>
+          <!-- ICD -->
+          <g id="ICD" class="node" data-name="ICD">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="149.9375,-69.9375 100.0625,-69.9375 100.0625,-20.0625 149.9375,-20.0625 149.9375,-69.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="125"
+              y="-48.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              ICD
+            </text>
+            <text
+              text-anchor="middle"
+              x="125"
+              y="-33.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (4)
+            </text>
+          </g>
+          <!-- EST&#45;&gt;ICD -->
+          <g id="edge11" class="edge" data-name="EST-&gt;ICD">
+            <path
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              d="M387.58,-471.95C383.59,-468.91 379.36,-466.15 375,-464 283.79,-418.96 217.56,-498.05 150,-422 65.45,-326.82 95,-159.08 114.03,-84.09"
+            ></path>
+            <polygon
+              fill="#000000"
+              stroke="#000000"
+              stroke-width="2"
+              points="117.49,-84.7 116.64,-74.14 110.72,-82.93 117.49,-84.7"
+            ></polygon>
+          </g>
+          <!-- RCO -->
+          <g id="RCO" class="node" data-name="RCO">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="519.9375,-525.9375 470.0625,-525.9375 470.0625,-476.0625 519.9375,-476.0625 519.9375,-525.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="495"
+              y="-504.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              RCO
+            </text>
+            <text
+              text-anchor="middle"
+              x="495"
+              y="-489.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (4)
+            </text>
+          </g>
+          <!-- ISN -->
+          <g id="ISN" class="node" data-name="ISN">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="358.9375,-69.9375 309.0625,-69.9375 309.0625,-20.0625 358.9375,-20.0625 358.9375,-69.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="334"
+              y="-48.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              ISN
+            </text>
+            <text
+              text-anchor="middle"
+              x="334"
+              y="-33.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (6)
+            </text>
+          </g>
+          <!-- RCO&#45;&gt;ISN -->
+          <g id="edge18" class="edge" data-name="RCO-&gt;ISN">
+            <path
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              d="M467.64,-471.82C463.64,-468.81 459.39,-466.08 455,-464 344.9,-411.72 263.31,-514.55 184,-422 94.65,-317.73 229.06,-153.61 297.72,-81.72"
+            ></path>
+            <polygon
+              fill="#000000"
+              stroke="#000000"
+              stroke-width="2"
+              points="300.52,-83.87 304.95,-74.24 295.49,-79 300.52,-83.87"
+            ></polygon>
+          </g>
+          <!-- PBE&#45;&gt;ISN -->
+          <g id="edge29" class="edge" data-name="PBE-&gt;ISN">
+            <path
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              d="M445.23,-167.79C422.94,-143.38 390.59,-107.96 366.52,-81.61"
+            ></path>
+            <polygon
+              fill="#000000"
+              stroke="#000000"
+              stroke-width="2"
+              points="368.98,-79.11 359.65,-74.09 363.81,-83.83 368.98,-79.11"
+            ></polygon>
+          </g>
+          <!-- IN1 -->
+          <g id="IN1" class="node" data-name="IN1">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="851.9375,-677.9375 802.0625,-677.9375 802.0625,-628.0625 851.9375,-628.0625 851.9375,-677.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="827"
+              y="-656.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              IN1
+            </text>
+            <text
+              text-anchor="middle"
+              x="827"
+              y="-641.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (2)
+            </text>
+          </g>
+          <!-- IN2 -->
+          <g id="IN2" class="node" data-name="IN2">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="824.9375,-69.9375 775.0625,-69.9375 775.0625,-20.0625 824.9375,-20.0625 824.9375,-69.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="800"
+              y="-48.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              IN2
+            </text>
+            <text
+              text-anchor="middle"
+              x="800"
+              y="-33.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (2)
+            </text>
+          </g>
+          <!-- IN1&#45;&gt;IN2 -->
+          <g id="edge9" class="edge" data-name="IN1-&gt;IN2">
+            <path
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              d="M832.36,-623.93C845.89,-548.22 878.06,-333.81 845,-160 839.94,-133.42 828.8,-105.11 818.87,-83.35"
+            ></path>
+            <polygon
+              fill="#000000"
+              stroke="#000000"
+              stroke-width="2"
+              points="821.98,-81.73 814.57,-74.15 815.64,-84.69 821.98,-81.73"
+            ></polygon>
+          </g>
+          <!-- COE -->
+          <g id="COE" class="node" data-name="COE">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="359.9375,-525.9375 310.0625,-525.9375 310.0625,-476.0625 359.9375,-476.0625 359.9375,-525.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="335"
+              y="-504.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              COE
+            </text>
+            <text
+              text-anchor="middle"
+              x="335"
+              y="-489.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (2)
+            </text>
+          </g>
+          <!-- TES -->
+          <g id="TES" class="node" data-name="TES">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="1122.9375,-69.9375 1073.0625,-69.9375 1073.0625,-20.0625 1122.9375,-20.0625 1122.9375,-69.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="1098"
+              y="-48.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              TES
+            </text>
+            <text
+              text-anchor="middle"
+              x="1098"
+              y="-33.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (2)
+            </text>
+          </g>
+          <!-- LIB -->
+          <g id="LIB" class="node" data-name="LIB">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="996.9375,-69.9375 947.0625,-69.9375 947.0625,-20.0625 996.9375,-20.0625 996.9375,-69.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="972"
+              y="-48.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              LIB
+            </text>
+            <text
+              text-anchor="middle"
+              x="972"
+              y="-33.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (2)
+            </text>
+          </g>
+          <!-- LOG -->
+          <g id="LOG" class="node" data-name="LOG">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="439.9375,-677.9375 390.0625,-677.9375 390.0625,-628.0625 439.9375,-628.0625 439.9375,-677.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="415"
+              y="-656.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              LOG
+            </text>
+            <text
+              text-anchor="middle"
+              x="415"
+              y="-641.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (2)
+            </text>
+          </g>
+          <!-- IHC&#45;&gt;IN2 -->
+          <!-- OPT -->
+          <g id="OPT" class="node" data-name="OPT">
+            <polygon
+              fill="lightgrey"
+              stroke="black"
+              points="69.9375,-69.9375 20.0625,-69.9375 20.0625,-20.0625 69.9375,-20.0625 69.9375,-69.9375 "
+            ></polygon>
+            <text
+              text-anchor="middle"
+              x="45"
+              y="-48.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              OPT
+            </text>
+            <text
+              text-anchor="middle"
+              x="45"
+              y="-33.8"
+              font-family="Times,serif"
+              font-size="14.00"
+            >
+              (2)
+            </text>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.rawgit.com/jquery/jquery-mousewheel/master/jquery.mousewheel.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.rawgit.com/jquery/jquery-color/master/jquery.color.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    ></script>
+    <script type="text/javascript" src="js/jquery.graphviz.svg.js"></script>
+    <script type="text/javascript">
+      $.extend({
+        getUrlVars: function () {
+          var vars = [],
+            hash;
+          var hashes = window.location.href
+            .slice(window.location.href.indexOf("?") + 1)
+            .split("&");
+          for (var i = 0; i < hashes.length; i++) {
+            hash = hashes[i].split("=");
+            vars.push(hash[0]);
+            vars[hash[0]] = hash[1];
+          }
+          return vars;
+        },
+        getUrlVar: function (name) {
+          return $.getUrlVars()[name];
+        },
+      });
+
+      $(document).ready(function () {
+        var grade = $.getUrlVar("grafo");
+        if (grade) {
+          grade = grade + ".svg";
+        } else {
+          grade = $.getUrlVar("grade");
+          if (grade) {
+            grade = grade + ".svg";
+          } else {
+            grade = "grade.svg";
+          }
+        }
+        // Função para remover destaque
+        function removeHighlight() {
+          $("g.node").removeClass("highlighted dimmed");
+          $("g.edge").removeClass("dimmed");
+        }
+
+        // Função para destacar nós e arestas conectadas
+        function highlightConnected(nodeId) {
+          // Seleciona nós conectados (predecessores e sucessores)
+          var connectedNodes = new Set();
+          // Sucessores
+          $("g.edge[data-name^='" + nodeId + "->']").each(function () {
+            var target = $(this).attr("data-name").split("->")[1];
+            connectedNodes.add(target);
+            $(this).removeClass("dimmed");
+          });
+          // Predecessores
+          $("g.edge[data-name$='->" + nodeId + "']").each(function () {
+            var source = $(this).attr("data-name").split("->")[0];
+            connectedNodes.add(source);
+            $(this).removeClass("dimmed");
+          });
+          // Destaca o nó clicado
+          $("#" + nodeId).addClass("highlighted");
+          // Destaca nós conectados
+          connectedNodes.forEach(function (nid) {
+            $("#" + nid).addClass("highlighted");
+          });
+          // Abaixa opacidade dos nós não conectados
+          $("g.node").each(function () {
+            var nid = $(this).attr("id");
+            if (nid !== nodeId && !connectedNodes.has(nid)) {
+              $(this).addClass("dimmed");
+            }
+          });
+          // Abaixa opacidade das arestas não conectadas
+          $("g.edge").each(function () {
+            var name = $(this).attr("data-name");
+            if (
+              !name.startsWith(nodeId + "->") &&
+              !name.endsWith("->" + nodeId)
+            ) {
+              $(this).addClass("dimmed");
+            }
+          });
+        }
+
+        // Adiciona evento de clique nos nós do SVG embutido
+        $("#graph g.node").on("click", function (e) {
+          removeHighlight();
+          var nodeId = $(this).attr("id");
+          if (nodeId) {
+            highlightConnected(nodeId);
+          }
+          e.stopPropagation();
+        });
+
+        // Remove destaque ao pressionar ESC
+        $(document).on("keydown.highlight", function (evt) {
+          if (evt.keyCode == 27) {
+            removeHighlight();
+          }
+        });
+
+        // Remove destaque ao clicar fora do nó
+        $("#graph").on("click.highlight", function (evt) {
+          // Só remove se não clicar em um nó
+          if (!$(evt.target).closest("g.node").length) {
+            removeHighlight();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
