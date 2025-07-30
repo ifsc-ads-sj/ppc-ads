@@ -9,6 +9,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
+      g.edge {
+        opacity: 0;
+        transition: opacity 0.2s;
+      }
       body, h1, h2, h3, h4, h5, h6, ul, li, p, #instructions, .graphviz-svg, #legenda, .cluster, .node, .edge, svg, text {
         font-family: Helvetica, Arial, sans-serif !important;
       }
@@ -75,6 +79,17 @@
     </style>
   </head>
   <body>
+    <div id="instructions-overlay" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.45); z-index: 9998;"></div>
+    <div id="instructions-popup" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #f8f9fa; color: #222; padding: 24px 36px 20px 36px; border-radius: 14px; max-width: 90vw; min-width: 320px; z-index: 9999; text-align: center; font-size: 1.1em; box-shadow: 0 8px 32px rgba(0,0,0,0.18);">
+      <button id="close-instructions" style="position: absolute; top: 8px; right: 12px; background: transparent; border: none; font-size: 1.5em; color: #888; cursor: pointer;">&times;</button>
+      <strong>Instruções:</strong><br>
+      <ul style="display:inline-block; text-align:left; margin: 12px 0 0 0;">
+        <li>Clique em uma disciplina para visualizar seus ancestrais e descendentes.</li>
+        <li>As flechas (setas) entre os nós indicam pré-requisitos.</li>
+        <li>Pressione <kbd>ESC</kbd> ou clique fora do gráfico para remover o destaque.</li>
+        <li>Logo abaixo mostra a legenda com o nome das disciplinas de todas as fases de ADS.</li>
+      </ul>
+    </div>
     <div
       id="graph"
       style="
@@ -82,7 +97,7 @@
         height: 100%;
         overflow-x: scroll;
         background: transparent;
-        margin-top: 50px;
+        margin-top: 25px;
       "
       class="graphviz-svg"
     >
@@ -1566,6 +1581,7 @@
         });
         edgesSvg.forEach(e => {
           e.classList.remove("highlighted", "dimmed");
+          e.style.opacity = "0";
         });
       }
       nodes.forEach(node => {
@@ -1586,13 +1602,14 @@
               n.classList.add("dimmed");
             }
           });
-          // Destaca arestas conectadas
+          // Destaca e revela arestas conectadas
           edgesSvg.forEach(edge => {
             const [from, to] = getEdgeNodes(edge);
             if (toHighlight.has(from) && toHighlight.has(to)) {
               edge.classList.remove("dimmed");
+              edge.style.opacity = "1";
             } else {
-              edge.classList.add("dimmed");
+              edge.style.opacity = "0";
             }
           });
         });
@@ -1608,6 +1625,11 @@
         if (!evt.target.closest("g.node")) {
           resetHighlight();
         }
+      });
+      // Fecha o popup de instruções
+      document.getElementById("close-instructions").addEventListener("click", function() {
+        document.getElementById("instructions-popup").style.display = "none";
+        document.getElementById("instructions-overlay").style.display = "none";
       });
     </script>
 
