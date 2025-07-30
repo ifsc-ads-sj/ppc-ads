@@ -1462,109 +1462,104 @@
     ></script>
     <script type="text/javascript" src="js/jquery.graphviz.svg.js"></script>
     <script type="text/javascript">
-      $.extend({
-        getUrlVars: function () {
-          var vars = [],
-            hash;
-          var hashes = window.location.href
-            .slice(window.location.href.indexOf("?") + 1)
-            .split("&");
-          for (var i = 0; i < hashes.length; i++) {
-            hash = hashes[i].split("=");
-            vars.push(hash[0]);
-            vars[hash[0]] = hash[1];
-          }
-          return vars;
-        },
-        getUrlVar: function (name) {
-          return $.getUrlVars()[name];
-        },
+
+    </script>
+    <script>
+      // Função para extrair o ID de um grupo de nó (ex: "node1")
+      function getNodeId(gElement) {
+        return gElement.id;
+      }
+
+      // Função que retorna os nós conectados a partir do atributo data-name
+      function getEdgeNodes(edge) {
+        const dataName = edge.getAttribute("data-name");
+        if (!dataName) return [];
+        const parts = dataName.split("->");
+        return parts.length === 2 ? parts : [];
+      }
+
+      // Mapeamento de relações entre nós
+      const edges = [...document.querySelectorAll("g.edge")];
+      const parentsMap = {};
+      const childrenMap = {};
+
+      edges.forEach(edge => {
+        const [from, to] = getEdgeNodes(edge);
+        if (!from || !to) return;
+        if (!childrenMap[from]) childrenMap[from] = [];
+        if (!parentsMap[to]) parentsMap[to] = [];
+        childrenMap[from].push(to);
+        parentsMap[to].push(from);
       });
 
-      $(document).ready(function () {
-        // Função para remover destaque
-        function removeHighlight() {
-          $("g.node").removeClass("highlighted dimmed");
-          $("g.edge").removeClass("dimmed");
-        }
+      // Busca recursiva
+      function getAllDescendants(nodeId, visited = new Set()) {
+        if (visited.has(nodeId)) return [];
+        visited.add(nodeId);
+        const children = childrenMap[nodeId] || [];
+        return children.concat(...children.map(child => getAllDescendants(child, visited)));
+      }
 
-        // Função para obter conexões diretas e irmãs dos predecessores
-        function getRecursivePredecessorsAndDirectSuccessors(nodeId) {
-          var nodes = new Set();
-          var edges = new Set();
-          nodes.add(nodeId);
+      function getAllAncestors(nodeId, visited = new Set()) {
+        if (visited.has(nodeId)) return [];
+        visited.add(nodeId);
+        const parents = parentsMap[nodeId] || [];
+        return parents.concat(...parents.map(parent => getAllAncestors(parent, visited)));
+      }
 
-          // Filhos (sucessores diretos)
-          $("g.edge[data-name^='" + nodeId + "->']").each(function () {
-            var target = $(this).attr("data-name").split("->")[1];
-            nodes.add(target);
-            edges.add($(this).attr("id"));
-          });
-
-          // Predecessores recursivos
-          var stack = [nodeId];
-          while (stack.length > 0) {
-            var current = stack.pop();
-            $("g.edge[data-name$='->" + current + "']").each(function () {
-              var source = $(this).attr("data-name").split("->")[0];
-              if (!nodes.has(source)) {
-                nodes.add(source);
-                stack.push(source);
-              }
-              edges.add($(this).attr("id"));
-            });
-          }
-
-          return { nodes: nodes, edges: edges };
-        }
-
-        // Destaca apenas conexões diretas e irmãs dos predecessores
-        function highlightRecursivePredecessorsAndDirectSuccessors(nodeId) {
-          var result = getRecursivePredecessorsAndDirectSuccessors(nodeId);
+      // Evento de clique nos nós
+      const nodes = document.querySelectorAll("g.node");
+      const edgesSvg = document.querySelectorAll("g.edge");
+      function resetHighlight() {
+        nodes.forEach(n => {
+          n.classList.remove("highlighted", "dimmed");
+        });
+        edgesSvg.forEach(e => {
+          e.classList.remove("highlighted", "dimmed");
+        });
+      }
+      nodes.forEach(node => {
+        node.style.cursor = "pointer";
+        node.addEventListener("click", () => {
+          resetHighlight();
+          const clickedId = getNodeId(node);
+          const descendants = getAllDescendants(clickedId);
+          const ancestors = getAllAncestors(clickedId);
+          const toHighlight = new Set([clickedId, ...descendants, ...ancestors]);
           // Destaca nós
-          $("g.node").each(function () {
-            var nid = $(this).attr("id");
-            if (result.nodes.has(nid)) {
-              $(this).addClass("highlighted").removeClass("dimmed");
+          nodes.forEach(n => {
+            if (toHighlight.has(n.id)) {
+              n.classList.add("highlighted");
+              n.classList.remove("dimmed");
             } else {
-              $(this).removeClass("highlighted").addClass("dimmed");
+              n.classList.remove("highlighted");
+              n.classList.add("dimmed");
             }
           });
-          // Destaca arestas
-          $("g.edge").each(function () {
-            var eid = $(this).attr("id");
-            if (result.edges.has(eid)) {
-              $(this).removeClass("dimmed");
+          // Destaca arestas conectadas
+          edgesSvg.forEach(edge => {
+            const [from, to] = getEdgeNodes(edge);
+            if (toHighlight.has(from) && toHighlight.has(to)) {
+              edge.classList.remove("dimmed");
             } else {
-              $(this).addClass("dimmed");
+              edge.classList.add("dimmed");
             }
           });
+        });
+      });
+      // Remove destaque ao pressionar ESC
+      document.addEventListener("keydown", function (evt) {
+        if (evt.key === "Escape") {
+          resetHighlight();
         }
-
-        // Adiciona evento de clique nos nós do SVG embutido
-        $("#graph g.node").on("click", function (e) {
-          removeHighlight();
-          var nodeId = $(this).attr("id");
-          if (nodeId) {
-            highlightRecursivePredecessorsAndDirectSuccessors(nodeId);
-          }
-          e.stopPropagation();
-        });
-
-        // Remove destaque ao pressionar ESC
-        $(document).on("keydown.highlight", function (evt) {
-          if (evt.keyCode == 27) {
-            removeHighlight();
-          }
-        });
-
-        // Remove destaque ao clicar fora do nó
-        $("#graph").on("click.highlight", function (evt) {
-          if (!$(evt.target).closest("g.node").length) {
-            removeHighlight();
-          }
-        });
+      });
+      // Remove destaque ao clicar fora do nó
+      document.addEventListener("click", function (evt) {
+        if (!evt.target.closest("g.node")) {
+          resetHighlight();
+        }
       });
     </script>
+
   </body>
 </html>
