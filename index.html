@@ -21,7 +21,7 @@
       }
       .highlighted polygon {
         stroke: #ff9800 !important;
-        stroke-width: 4 !important;
+        stroke-width: 2 !important;
         fill: #fff3e0 !important;
       }
       .dimmed {
@@ -31,16 +31,18 @@
       .graphviz-svg {
         width: 100vw;
         max-width: 100vw;
-        height: 70vh;
-        max-height: 70vh;
-        overflow-x: auto;
-        overflow-y: auto;
+        height: 100vh;
+        max-height: 100vh;
+        overflow: hidden;
         background: transparent;
         -webkit-overflow-scrolling: touch;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
       svg {
-        width: 100% !important;
-        height: auto !important;
+        width: 100vw !important;
+        height: 100vh !important;
         min-width: 600px;
         min-height: 400px;
         display: block;
@@ -53,10 +55,14 @@
         .graphviz-svg {
           height: 50vh;
           max-height: 50vh;
+          overflow-x: auto;
+          overflow-y: auto;
         }
         svg {
           min-width: 300px;
           min-height: 200px;
+          width: 100% !important;
+          height: auto !important;
         }
         #legenda {
           padding: 8px;
@@ -1429,8 +1435,8 @@
         </g>
       </svg>
     </div>
-    <div id="legenda" style="margin: 32px auto 0 auto; padding: 16px; background: #f9f9f9; border-radius: 8px; max-width: 900px; text-align: center;">
-      <h5 style="margin-bottom: 16px;">Análise e Desenvolvimento de Sistemas - IFSC</h5>
+    <div id="legenda" style="margin: 32px auto 10px auto; padding: 16px; background: rgb(242, 242, 242); border-radius: 8px; max-width: 900px; text-align: center; display: block;">
+      <h6 style="margin-bottom: 16px;"><strong>Análise e Desenvolvimento de Sistemas - IFSC</strong></h6>
       <ul style="display: inline-block; text-align: left;">
         <li><strong>1° Fase</strong>
           <ul>
