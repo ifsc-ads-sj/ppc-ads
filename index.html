@@ -7,7 +7,11 @@
     />
     <link rel="stylesheet" href="css/graphviz.svg.css" />
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
+      body, h1, h2, h3, h4, h5, h6, ul, li, p, #instructions, .graphviz-svg, #legenda, .cluster, .node, .edge, svg, text {
+        font-family: Helvetica, Arial, sans-serif !important;
+      }
       #instructions {
         color: #000000;
         position: absolute;
@@ -22,6 +26,45 @@
       }
       .dimmed {
         opacity: 0.2 !important;
+      }
+      /* Responsividade para SVG e containers */
+      .graphviz-svg {
+        width: 100vw;
+        max-width: 100vw;
+        height: 70vh;
+        max-height: 70vh;
+        overflow-x: auto;
+        overflow-y: auto;
+        background: transparent;
+        -webkit-overflow-scrolling: touch;
+      }
+      svg {
+        width: 100% !important;
+        height: auto !important;
+        min-width: 600px;
+        min-height: 400px;
+        display: block;
+        font-family: Helvetica, Arial, sans-serif !important;
+      }
+      text {
+        font-family: Helvetica, Arial, sans-serif !important;
+      }
+      @media (max-width: 600px) {
+        .graphviz-svg {
+          height: 50vh;
+          max-height: 50vh;
+        }
+        svg {
+          min-width: 300px;
+          min-height: 200px;
+        }
+        #legenda {
+          padding: 8px;
+          font-size: 14px;
+        }
+        h5 {
+          font-size: 16px;
+        }
       }
     </style>
   </head>
@@ -58,7 +101,7 @@
             text-anchor="middle"
             x="595"
             y="-774"
-            font-family="Times,serif"
+            font-family="Helvetica, Arial, sans-serif"
             font-size="25.00"
             fill="#000000"
           >
