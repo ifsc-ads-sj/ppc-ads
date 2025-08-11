@@ -1,7 +1,3 @@
 # ppc-ads
 
-Este repositório foi feito para ser acessado para estudantes do curso de Análise e Desenvolvimento de Sistemas do Instituto Federal de Santa Catarina, para pode auxiliar na visibilidade de disciplinas nos semestres.
-
----
-
-Estudantes, fiquem a vontade para contribuir
+Este repositório contém a representação visual das unidades curriculares do curso de Análise e Desenvolvimento de Sistemas do IFSC mostrando requisitos (Ancestrais e Descendentes). 
