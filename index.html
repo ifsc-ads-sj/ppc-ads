@@ -76,6 +76,219 @@
           font-size: 16px;
         }
       }
+
+      /* Estilos para a Seção de Horários com Dropdown */
+      .horarios-section {
+        margin: 50px auto;
+        padding: 20px;
+        max-width: 1200px;
+        background: #f8f9fa;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      }
+
+      .horarios-title {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+        font-size: 2.2em;
+        font-weight: 600;
+      }
+
+      .horarios-dropdown {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 30px auto;
+      }
+
+      .dropdown-button {
+        width: 100%;
+        background: #007bff;
+        color: white;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1.1em;
+        font-weight: 500;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0,123,255,0.3);
+      }
+
+      .dropdown-button:hover {
+        background: #0056b3;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,123,255,0.4);
+      }
+
+      .dropdown-arrow {
+        font-size: 0.8em;
+        transition: transform 0.3s ease;
+      }
+
+      .dropdown-menu.show .dropdown-arrow {
+        transform: rotate(180deg);
+      }
+
+      .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        z-index: 1000;
+        display: none;
+        overflow: hidden;
+      }
+
+      .dropdown-menu.show {
+        display: block;
+        animation: fadeInDown 0.3s ease;
+      }
+
+      .dropdown-item {
+        width: 100%;
+        padding: 12px 20px;
+        border: none;
+        background: white;
+        color: #333;
+        text-align: left;
+        cursor: pointer;
+        font-size: 1em;
+        transition: background-color 0.2s ease;
+        border-bottom: 1px solid #f8f9fa;
+      }
+
+      .dropdown-item:last-child {
+        border-bottom: none;
+      }
+
+      .dropdown-item:hover {
+        background: #f8f9fa;
+        color: #007bff;
+      }
+
+      .dropdown-item:active {
+        background: #e9ecef;
+      }
+
+      .horario-content {
+        margin-top: 20px;
+        animation: fadeIn 0.3s ease;
+      }
+
+      .horario-content h3 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+        font-size: 1.8em;
+        font-weight: 600;
+      }
+
+      .horario-image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        min-height: 300px;
+      }
+
+      .horario-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        transition: transform 0.3s ease;
+      }
+
+      .horario-image:hover {
+        transform: scale(1.02);
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Responsividade para a seção de horários */
+      @media (max-width: 768px) {
+        .horarios-section {
+          margin: 30px 15px;
+          padding: 15px;
+        }
+
+        .horarios-title {
+          font-size: 1.8em;
+          margin-bottom: 20px;
+        }
+
+        .horarios-dropdown {
+          max-width: 250px;
+        }
+
+        .dropdown-button {
+          padding: 12px 16px;
+          font-size: 1em;
+        }
+
+        .horario-content h3 {
+          font-size: 1.5em;
+        }
+
+        .horario-image-container {
+          padding: 15px;
+          min-height: 250px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .horarios-dropdown {
+          max-width: 200px;
+        }
+
+        .dropdown-button {
+          padding: 10px 12px;
+          font-size: 0.9em;
+        }
+
+        .dropdown-item {
+          padding: 10px 16px;
+          font-size: 0.9em;
+        }
+
+        .horario-image-container {
+          padding: 10px;
+          min-height: 200px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1631,7 +1844,85 @@
         document.getElementById("instructions-popup").style.display = "none";
         document.getElementById("instructions-overlay").style.display = "none";
       });
+
+      // Funcionalidade do dropdown de horários
+      document.addEventListener('DOMContentLoaded', function() {
+        const dropdownButton = document.getElementById('horarios-dropdown-button');
+        const dropdownMenu = document.getElementById('horarios-dropdown-menu');
+        const horarioContent = document.getElementById('horario-content');
+        const horarioImage = document.getElementById('horario-image');
+        const horarioTitle = document.getElementById('horario-title');
+        const dropdownArrow = document.querySelector('.dropdown-arrow');
+
+        // Toggle do dropdown
+        dropdownButton.addEventListener('click', function() {
+          dropdownMenu.classList.toggle('show');
+        });
+
+        // Fecha dropdown ao clicar fora
+        document.addEventListener('click', function(event) {
+          if (!event.target.closest('.horarios-dropdown')) {
+            dropdownMenu.classList.remove('show');
+          }
+        });
+
+        // Função para mostrar horário
+        function showHorario(fase, imageSrc) {
+          horarioTitle.textContent = `Horário da ${fase}ª Fase`;
+          horarioImage.src = imageSrc;
+          horarioImage.alt = `Tabela de horários da ${fase}ª Fase do curso de Análise e Desenvolvimento de Sistemas`;
+          horarioContent.style.display = 'block';
+          dropdownMenu.classList.remove('show');          
+          dropdownButton.textContent = `${fase} Fase`;
+          dropdownButton.appendChild(dropdownArrow);
+        }
+        //TODO: FAZER TABELA DE HORÁRIOS NATIVA DO HTML SEM USAR IMAGENS PARA FACILITAR A MANUTENÇÃO
+        //TODO: FAZER UM SCRIPT QUE PEGA O HORÁRIO DIRETAMENTE DO SITE DO IFSC E FAZ A INTEGRAÇÃO COM O HTML https://ifsc-sj.edupage.org/timetable/
+        // Event listeners para os botões das fases
+        document.getElementById('fase1-btn').addEventListener('click', () => showHorario(1, 'images/1fase.png'));
+        document.getElementById('fase2-btn').addEventListener('click', () => showHorario(2, 'images/2fase.png'));
+        document.getElementById('fase3-btn').addEventListener('click', () => showHorario(3, 'images/3fase.png'));
+        document.getElementById('fase4-btn').addEventListener('click', () => showHorario(4, 'images/4fase.png'));
+        document.getElementById('fase5-btn').addEventListener('click', () => showHorario(5, 'images/5fase.png'));
+        showHorario(1, 'images/1fase.png');
+      });
     </script>
+
+    <!-- Seção de Horários das Fases -->
+    <section class="horarios-section">
+      <div class="container">
+        <h2 class="horarios-title">Horários das Fases</h2>
+        
+        <!-- Dropdown -->
+        <div class="horarios-dropdown">
+          <button id="horarios-dropdown-button" class="dropdown-button">
+            1 Fase
+            <span class="dropdown-arrow">▼</span>
+          </button>
+          
+          <div id="horarios-dropdown-menu" class="dropdown-menu">
+            <button id="fase1-btn" class="dropdown-item">1 Fase</button>
+            <button id="fase2-btn" class="dropdown-item">2 Fase</button>
+            <button id="fase3-btn" class="dropdown-item">3 Fase</button>
+            <button id="fase4-btn" class="dropdown-item">4 Fase</button>
+            <button id="fase5-btn" class="dropdown-item">5 Fase</button>
+          </div>
+        </div>
+        
+        <!-- Conteúdo do Horário -->
+        <div id="horario-content" class="horario-content">
+          <h3 id="horario-title">Horário da 1ª Fase</h3>
+          <div class="horario-image-container">
+            <img 
+              id="horario-image"
+              src="images/1fase.png" 
+              alt="Tabela de horários da 1ª Fase do curso de Análise e Desenvolvimento de Sistemas" 
+              class="horario-image"
+              loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
 
   </body>
 </html>
