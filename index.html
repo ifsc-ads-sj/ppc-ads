@@ -1852,6 +1852,7 @@
         const horarioContent = document.getElementById('horario-content');
         const horarioImage = document.getElementById('horario-image');
         const horarioTitle = document.getElementById('horario-title');
+        const dropdownArrow = document.querySelector('.dropdown-arrow');
 
         // Toggle do dropdown
         dropdownButton.addEventListener('click', function() {
@@ -1871,7 +1872,9 @@
           horarioImage.src = imageSrc;
           horarioImage.alt = `Tabela de horários da ${fase}ª Fase do curso de Análise e Desenvolvimento de Sistemas`;
           horarioContent.style.display = 'block';
-          dropdownMenu.classList.remove('show');
+          dropdownMenu.classList.remove('show');          
+          dropdownButton.textContent = `${fase} Fase`;
+          dropdownButton.appendChild(dropdownArrow);
         }
         //TODO: FAZER TABELA DE HORÁRIOS NATIVA DO HTML SEM USAR IMAGENS PARA FACILITAR A MANUTENÇÃO
         //TODO: FAZER UM SCRIPT QUE PEGA O HORÁRIO DIRETAMENTE DO SITE DO IFSC E FAZ A INTEGRAÇÃO COM O HTML https://ifsc-sj.edupage.org/timetable/
@@ -1881,6 +1884,7 @@
         document.getElementById('fase3-btn').addEventListener('click', () => showHorario(3, 'images/3fase.png'));
         document.getElementById('fase4-btn').addEventListener('click', () => showHorario(4, 'images/4fase.png'));
         document.getElementById('fase5-btn').addEventListener('click', () => showHorario(5, 'images/5fase.png'));
+        showHorario(1, 'images/1fase.png');
       });
     </script>
 
@@ -1892,7 +1896,7 @@
         <!-- Dropdown -->
         <div class="horarios-dropdown">
           <button id="horarios-dropdown-button" class="dropdown-button">
-            Selecione uma Fase
+            1 Fase
             <span class="dropdown-arrow">▼</span>
           </button>
           
@@ -1906,13 +1910,13 @@
         </div>
         
         <!-- Conteúdo do Horário -->
-        <div id="horario-content" class="horario-content" style="display: none;">
-          <h3 id="horario-title"></h3>
+        <div id="horario-content" class="horario-content">
+          <h3 id="horario-title">Horário da 1ª Fase</h3>
           <div class="horario-image-container">
             <img 
               id="horario-image"
-              src="" 
-              alt="" 
+              src="images/1fase.png" 
+              alt="Tabela de horários da 1ª Fase do curso de Análise e Desenvolvimento de Sistemas" 
               class="horario-image"
               loading="lazy">
           </div>
