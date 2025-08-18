@@ -289,6 +289,278 @@
           min-height: 200px;
         }
       }
+
+      /* Estilos para a Seção de Pesquisa de Disciplinas */
+      .pesquisa-section {
+        margin: 50px auto;
+        padding: 20px;
+        max-width: 1200px;
+        background: #f8f9fa;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      }
+
+      .pesquisa-title {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+        font-size: 2.2em;
+        font-weight: 600;
+      }
+
+      .search-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+      }
+
+      .search-input-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+      }
+
+      .search-input {
+        width: 100%;
+        padding: 15px 50px 15px 20px;
+        border: 2px solid #dee2e6;
+        border-radius: 25px;
+        font-size: 1.1em;
+        transition: all 0.3s ease;
+        background: white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      }
+
+      .search-input:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 4px 12px rgba(0,123,255,0.3);
+        transform: translateY(-2px);
+      }
+
+      .search-icon {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.2em;
+        color: #6c757d;
+        pointer-events: none;
+      }
+
+      .search-results {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        overflow: hidden;
+        animation: fadeIn 0.3s ease;
+      }
+
+      .result-item {
+        padding: 20px;
+        border-bottom: 1px solid #f8f9fa;
+        transition: background-color 0.2s ease;
+        cursor: pointer;
+      }
+
+      .result-item:last-child {
+        border-bottom: none;
+      }
+
+      .result-item:hover {
+        background: #f8f9fa;
+      }
+
+      .result-item.highlighted {
+        background: #e3f2fd;
+        border-left: 4px solid #007bff;
+      }
+
+      .disciplina-nome {
+        font-size: 1.3em;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 8px;
+      }
+
+      .disciplina-codigo {
+        display: inline-block;
+        background: #007bff;
+        color: white;
+        padding: 4px 12px;
+        border-radius: 15px;
+        font-size: 0.9em;
+        font-weight: 500;
+        margin-bottom: 12px;
+      }
+
+             .disciplina-info {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+         gap: 15px;
+         margin-bottom: 15px;
+       }
+
+       .info-item {
+         display: flex;
+         align-items: flex-start;
+         gap: 8px;
+       }
+
+       .info-label {
+         font-weight: 600;
+         color: #6c757d;
+         min-width: 80px;
+         flex-shrink: 0;
+       }
+
+       .info-value {
+         color: #333;
+         flex: 1;
+       }
+
+       .horarios-detalhados {
+         margin-top: 8px;
+         padding: 8px 12px;
+         background: #f8f9fa;
+         border-radius: 6px;
+         border-left: 3px solid #007bff;
+       }
+
+       .horario-dia {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 4px 0;
+         border-bottom: 1px solid #e9ecef;
+       }
+
+       .horario-dia:last-child {
+         border-bottom: none;
+       }
+
+       .dia-semana {
+         font-weight: 600;
+         color: #495057;
+         min-width: 120px;
+       }
+
+       .horario-tempo {
+         color: #007bff;
+         font-weight: 500;
+       }
+
+       .aviso-sala {
+         margin-top: 12px;
+         padding: 8px 12px;
+         background: #fff3cd;
+         border: 1px solid #ffeaa7;
+         border-radius: 6px;
+         font-size: 0.9em;
+         color: #856404;
+         display: flex;
+         align-items: center;
+         gap: 8px;
+       }
+
+       .aviso-sala::before {
+         content: "⚠️";
+         font-size: 1.1em;
+       }
+
+      .semestre-indicator {
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.9em;
+        font-weight: 500;
+        margin-left: 10px;
+      }
+
+      .semestre-atual {
+        background: #28a745;
+        color: white;
+      }
+
+      .semestre-alternativo {
+        background: #ffc107;
+        color: #212529;
+      }
+
+      .no-results {
+        text-align: center;
+        padding: 40px 20px;
+        color: #6c757d;
+        font-size: 1.1em;
+      }
+
+      .no-results-icon {
+        font-size: 3em;
+        margin-bottom: 15px;
+        opacity: 0.5;
+      }
+
+      /* Responsividade para a seção de pesquisa */
+      @media (max-width: 768px) {
+        .pesquisa-section {
+          margin: 30px 15px;
+          padding: 15px;
+        }
+
+        .pesquisa-title {
+          font-size: 1.8em;
+          margin-bottom: 20px;
+        }
+
+        .search-input {
+          padding: 12px 45px 12px 15px;
+          font-size: 1em;
+        }
+
+                 .disciplina-info {
+           grid-template-columns: 1fr;
+           gap: 10px;
+         }
+
+         .disciplina-nome {
+           font-size: 1.2em;
+         }
+
+         .horarios-detalhados {
+           margin-top: 6px;
+           padding: 6px 10px;
+         }
+
+         .horario-dia {
+           flex-direction: column;
+           align-items: flex-start;
+           gap: 4px;
+         }
+
+         .dia-semana {
+           min-width: auto;
+         }
+
+         .aviso-sala {
+           font-size: 0.85em;
+           padding: 6px 10px;
+         }
+      }
+
+      @media (max-width: 480px) {
+        .search-input {
+          padding: 10px 40px 10px 12px;
+          font-size: 0.9em;
+        }
+
+        .result-item {
+          padding: 15px;
+        }
+
+        .disciplina-nome {
+          font-size: 1.1em;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1718,6 +1990,30 @@
         </li>
       </ul>
     </div>
+
+    <!-- Seção de Pesquisa de Disciplinas -->
+    <section class="pesquisa-section">
+      <div class="container">
+        <h2 class="pesquisa-title">Pesquisar Disciplina</h2>
+        
+        <div class="search-container">
+          <div class="search-input-wrapper">
+            <input 
+              type="text" 
+              id="search-disciplina" 
+              class="search-input" 
+              placeholder="Digite o nome ou código da disciplina (ex: POO ou Programação Orientada a Objetos)"
+            >
+            <i class="search-icon">🔍</i>
+          </div>
+        </div>
+        
+        <div id="search-results" class="search-results" style="display: none;">
+          <!-- Resultados serão inseridos aqui via JavaScript -->
+        </div>
+      </div>
+    </section>
+
     <script
       type="text/javascript"
       src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -1743,6 +2039,460 @@
 
     </script>
     <script>
+      // Base de dados das disciplinas com horários por semestre
+      const disciplinas = {
+        // Fase 1
+        "FDM": {
+          nome: "FUNDAMENTOS DA MATEMÁTICA",
+          fase: 1,
+          codigo: "FDM",
+          horarios: {
+            semestre1: { 
+              dias: ["Segunda-feira"], 
+              horario: "18:30-20:20", 
+              sala: "Sala 16"
+            }
+          }
+        },
+        "AOC": {
+          nome: "FUNDAMENTOS DE ARQUITETURA E ORGANIZAÇÃO DE COMPUTADORES",
+          fase: 1,
+          codigo: "AOC",
+          horarios: {
+            semestre1: { dias: ["Quarta-feira"], horario: "18:30-20:20", sala: "Sala 16" }
+          }
+        },
+        "IN1": {
+          nome: "INGLÊS INSTRUMENTAL I",
+          fase: 1,
+          codigo: "IN1",
+          horarios: {
+            semestre1: { dias: ["Quarta-feira"], horario: "20:40-22:30", sala: "Sala 16" }
+          }
+        },
+        "ICO": {
+          nome: "INTRODUÇÃO À COMPUTAÇÃO",
+          fase: 1,
+          codigo: "ICO",
+          horarios: {
+            semestre1: { 
+              dias: ["Terça-feira"], 
+              horario: "18:30-20:20", 
+              sala: "LabProg (T01/T02)"
+            }
+          }
+        },
+        "LOG": {
+          nome: "LÓGICA MATEMÁTICA",
+          fase: 1,
+          codigo: "LOG",
+          horarios: {
+            semestre1: { dias: ["Quinta-feira"], horario: "18:30-20:20", sala: "Sala 105" }
+          }
+        },
+        "ALG": {
+          nome: "PENSAMENTO COMPUTACIONAL E ALGORITMOS",
+          fase: 1,
+          codigo: "ALG",
+          horarios: {
+            semestre1: { 
+              dias: ["Terça-feira"], 
+              horario: "18:30-20:20", 
+              sala: "LabSIDI (T01/T02)"
+            }
+          }
+        },
+
+        // Fase 2
+        "AE1": {
+          nome: "ATIVIDADES DE EXTENSÃO I",
+          fase: 2,
+          codigo: "AE1",
+          horarios: {
+            semestre1: { dias: ["Sexta-feira"], horario: "19:00-22:30", sala: "Auditório" }
+          }
+        },
+        "COE": {
+          nome: "COMUNICAÇÃO E EXPRESSÃO",
+          fase: 2,
+          codigo: "COE",
+          horarios: {
+            semestre1: { dias: ["Segunda-feira", "Quarta-feira"], horario: "19:00-22:30", sala: "Sala 201" }
+          }
+        },
+        "EST": {
+          nome: "FUNDAMENTOS DE PROBABILIDADE E ESTATÍSTICA",
+          fase: 2,
+          codigo: "EST",
+          horarios: {
+            semestre1: { dias: ["Terça-feira", "Quinta-feira"], horario: "19:00-22:30", sala: "Sala 203" }
+          }
+        },
+        "FE1": {
+          nome: "PROGRAMAÇÃO FRONTEND I",
+          fase: 2,
+          codigo: "FE1",
+          horarios: {
+            semestre1: { dias: ["Segunda-feira", "Quarta-feira"], horario: "19:00-22:30", sala: "Lab 7" }
+          }
+        },
+        "POO": {
+          nome: "PROGRAMAÇÃO ORIENTADA A OBJETOS",
+          fase: 2,
+          codigo: "POO",
+          horarios: {
+            semestre1: { dias: ["Terça-feira", "Quinta-feira"], horario: "19:00-22:30", sala: "Lab 9" }
+          }
+        },
+        "RCO": {
+          nome: "REDES DE COMPUTADORES",
+          fase: 2,
+          codigo: "RCO",
+          horarios: {
+            semestre1: { dias: ["Segunda-feira", "Quarta-feira"], horario: "19:00-22:30", sala: "Lab 11" }
+          }
+        },
+
+        // Fase 3
+        "BCD": {
+          nome: "BANCO DE DADOS",
+          fase: 3,
+          codigo: "BCD",
+          horarios: {
+            semestre1: { dias: ["Segunda-feira", "Quarta-feira"], horario: "19:00-22:30", sala: "Lab 13" }
+          }
+        },
+        "ESD": {
+          nome: "ESTRUTURA DE DADOS",
+          fase: 3,
+          codigo: "ESD",
+          horarios: {
+            semestre1: { dias: ["Terça-feira", "Quinta-feira"], horario: "19:00-22:30", sala: "Lab 15" }
+          }
+        },
+        "ES1": {
+          nome: "ENGENHARIA DE SOFTWARE I",
+          fase: 3,
+          codigo: "ES1",
+          horarios: {
+            semestre1: { dias: ["Segunda-feira", "Quarta-feira"], horario: "19:00-22:30", sala: "Sala 301" }
+          }
+        },
+        "FE2": {
+          nome: "PROGRAMAÇÃO FRONTEND II",
+          fase: 3,
+          codigo: "FE2",
+          horarios: {
+            semestre1: { dias: ["Terça-feira", "Quinta-feira"], horario: "19:00-22:30", sala: "Lab 17" }
+          }
+        },
+        "SEG": {
+          nome: "SEGURANÇA DA INFORMAÇÃO",
+          fase: 3,
+          codigo: "SEG",
+          horarios: {
+            semestre1: { dias: ["Segunda-feira", "Quarta-feira"], horario: "19:00-22:30", sala: "Sala 303" }
+          }
+        },
+
+        // Fase 4
+        "AE2": {
+          nome: "ATIVIDADES DE EXTENSÃO II",
+          fase: 4,
+          codigo: "AE2",
+          horarios: {
+            semestre1: { dias: ["Sexta-feira"], horario: "19:00-22:30", sala: "Auditório" }
+          }
+        },
+        "ES2": {
+          nome: "ENGENHARIA DE SOFTWARE II",
+          fase: 4,
+          codigo: "ES2",
+          horarios: {
+            semestre1: { dias: ["Segunda-feira", "Quarta-feira"], horario: "19:00-22:30", sala: "Sala 401" }
+          }
+        },
+        "IHC": {
+          nome: "INTERFACE HUMANO-COMPUTADOR",
+          fase: 4,
+          codigo: "IHC",
+          horarios: {
+            semestre1: { dias: ["Terça-feira", "Quinta-feira"], horario: "19:00-22:30", sala: "Lab 19" }
+          }
+        },
+        "PBE": {
+          nome: "PROGRAMAÇÃO BACKEND",
+          fase: 4,
+          codigo: "PBE",
+          horarios: {
+            semestre1: { dias: ["Segunda-feira", "Quarta-feira"], horario: "19:00-22:30", sala: "Lab 21" }
+          }
+        },
+        "SOP": {
+          nome: "SISTEMAS OPERACIONAIS",
+          fase: 4,
+          codigo: "SOP",
+          horarios: {
+            semestre1: { dias: ["Terça-feira", "Quinta-feira"], horario: "19:00-22:30", sala: "Sala 403" }
+          }
+        },
+
+        // Fase 5
+        "IN2": {
+          nome: "INGLÊS INSTRUMENTAL II",
+          fase: 5,
+          codigo: "IN2",
+          tipo: "optativa",
+          horarios: {
+            semestre1: { dias: ["Sexta-feira"], horario: "19:00-22:30", sala: "Sala 501" }
+          }
+        },
+        "LIB": {
+          nome: "LIBRAS",
+          fase: 5,
+          codigo: "LIB",
+          tipo: "optativa",
+          horarios: {
+            semestre1: { dias: ["Sexta-feira"], horario: "19:00-22:30", sala: "Sala 503" }
+          }
+        },
+        "TES": {
+          nome: "TÓPICOS ESPECIAIS",
+          fase: 5,
+          codigo: "TES",
+          tipo: "optativa",
+          horarios: {
+            semestre1: { dias: ["Sexta-feira"], horario: "19:00-22:30", sala: "Sala 505" }
+          }
+        },
+        "AE3": {
+          nome: "ATIVIDADES DE EXTENSÃO III",
+          fase: 5,
+          codigo: "AE3",
+          horarios: {
+            semestre1: { dias: ["Sexta-feira"], horario: "19:00-22:30", sala: "Auditório" }
+          }
+        },
+        "ICD": {
+          nome: "INTRODUÇÃO À CIÊNCIA DE DADOS E APRENDIZADO DE MÁQUINA",
+          fase: 5,
+          codigo: "ICD",
+          horarios: {
+            semestre1: { dias: ["Segunda-feira", "Quarta-feira"], horario: "19:00-22:30", sala: "Lab 23" }
+          }
+        },
+        "ISN": {
+          nome: "INFRAESTRUTURA E SERVIÇOS EM NUVEM",
+          fase: 5,
+          codigo: "ISN",
+          horarios: {
+            semestre1: { dias: ["Terça-feira", "Quinta-feira"], horario: "19:00-22:30", sala: "Lab 25" }
+          }
+        },
+        "MOV": {
+          nome: "PROGRAMAÇÃO PARA APLICATIVOS MÓVEIS",
+          fase: 5,
+          codigo: "MOV",
+          horarios: {
+            semestre1: { dias: ["Segunda-feira", "Quarta-feira"], horario: "19:00-22:30", sala: "Lab 27" }
+          }
+        }
+      };
+
+      // Função para determinar o semestre atual futuramente
+      function obterSemestreAtual() {
+        // Sempre retorna semestre1 para simplificar os dados
+        return 'semestre1';
+      }
+
+      // Função para remover acentos e normalizar texto para busca
+      function normalizarTexto(texto) {
+        return texto.normalize('NFD')
+                   .replace(/[\u0300-\u036f]/g, '')
+                   .toLowerCase()
+                   .trim();
+      }
+
+      // Função para buscar disciplinas
+      function buscarDisciplinas(termoBusca) {
+        if (!termoBusca || termoBusca.trim() === '') {
+          return [];
+        }
+
+        const termoNormalizado = normalizarTexto(termoBusca);
+        const resultados = [];
+
+        for (const [codigo, disciplina] of Object.entries(disciplinas)) {
+          const nomeNormalizado = normalizarTexto(disciplina.nome);
+          const codigoNormalizado = normalizarTexto(disciplina.codigo);
+
+          // Busca por código exato ou nome contendo o termo
+          if (codigoNormalizado.includes(termoNormalizado) || 
+              nomeNormalizado.includes(termoNormalizado)) {
+            resultados.push({
+              codigo: codigo,
+              disciplina: disciplina,
+              relevancia: calcularRelevancia(termoNormalizado, nomeNormalizado, codigoNormalizado)
+            });
+          }
+        }
+
+        // Ordenar por relevância (mais relevantes primeiro)
+        return resultados.sort((a, b) => b.relevancia - a.relevancia);
+      }
+
+      // Função para calcular relevância da busca
+      function calcularRelevancia(termo, nome, codigo) {
+        let relevancia = 0;
+        
+        // Busca exata por código tem maior relevância
+        if (codigo === termo) {
+          relevancia += 100;
+        }
+        
+        // Busca por código contendo o termo
+        if (codigo.includes(termo)) {
+          relevancia += 50;
+        }
+        
+        // Busca exata por nome
+        if (nome === termo) {
+          relevancia += 80;
+        }
+        
+        // Busca por nome contendo o termo
+        if (nome.includes(termo)) {
+          relevancia += 30;
+        }
+        
+        // Palavras que começam com o termo têm mais relevância
+        const palavrasNome = nome.split(' ');
+        for (const palavra of palavrasNome) {
+          if (palavra.startsWith(termo)) {
+            relevancia += 20;
+          }
+        }
+        
+        return relevancia;
+      }
+
+             // Função para exibir resultados da busca
+       function exibirResultados(resultados) {
+         const containerResultados = document.getElementById('search-results');
+         
+         if (resultados.length === 0) {
+           containerResultados.innerHTML = `
+             <div class="no-results">
+               <div class="no-results-icon">🔍</div>
+               <p>Nenhuma disciplina encontrada com o termo pesquisado.</p>
+               <p>Tente buscar por nome completo ou código da disciplina.</p>
+             </div>
+           `;
+           containerResultados.style.display = 'block';
+           return;
+         }
+
+         const semestreAtual = obterSemestreAtual();
+         
+         let html = '';
+         
+         resultados.forEach(({ codigo, disciplina }) => {
+           const horarioAtual = disciplina.horarios[semestreAtual];
+           
+           // Verifica se há horários diferentes por dia
+           const temHorariosDiferentes = Array.isArray(horarioAtual.horariosPorDia) && horarioAtual.horariosPorDia.length > 0;
+           
+           let horariosHtml = '';
+           if (temHorariosDiferentes) {
+             horariosHtml = `
+               <div class="horarios-detalhados">
+                 ${horarioAtual.horariosPorDia.map(horario => `
+                   <div class="horario-dia">
+                     <span class="dia-semana">${horario.dia}</span>
+                     <span class="horario-tempo">${horario.horario}</span>
+                   </div>
+                 `).join('')}
+               </div>
+             `;
+           } else {
+             horariosHtml = `<span class="info-value">${horarioAtual.horario}</span>`;
+           }
+           
+           html += `
+             <div class="result-item" onclick="destacarDisciplinaNoGrafico('${codigo}')">
+               <div class="disciplina-nome">${disciplina.nome}</div>
+               <div class="disciplina-codigo">${disciplina.codigo}</div>
+               
+               <div class="disciplina-info">
+                 <div class="info-item">
+                   <span class="info-label">Fase:</span>
+                   <span class="info-value">${disciplina.fase}ª Fase</span>
+                 </div>
+                 <div class="info-item">
+                   <span class="info-label">Dias:</span>
+                   <span class="info-value">${horarioAtual.dias.join(', ')}</span>
+                 </div>
+                 <div class="info-item">
+                   <span class="info-label">Horário:</span>
+                   ${horariosHtml}
+                 </div>
+                 <div class="info-item">
+                   <span class="info-label">Sala:</span>
+                   <span class="info-value">${horarioAtual.sala}</span>
+                 </div>
+               </div>
+               
+               <div class="aviso-sala">
+                 As salas podem estar incorretas e mudam com frequência. Consulte o e-mail ou o grupo da disciplina.
+               </div>
+             </div>
+           `;
+         });
+         
+         containerResultados.innerHTML = html;
+         containerResultados.style.display = 'block';
+       }
+
+      // Função para destacar disciplina no gráfico
+      function destacarDisciplinaNoGrafico(codigoDisciplina) {
+        resetHighlight();
+        
+        const nodeDisciplina = document.querySelector(`g#${codigoDisciplina}`);
+        if (nodeDisciplina) {
+          const descendants = getAllDescendants(codigoDisciplina);
+          const ancestors = getAllAncestors(codigoDisciplina);
+          const toHighlight = new Set([codigoDisciplina, ...descendants, ...ancestors]);
+          
+          // Destaca nós
+          nodes.forEach(n => {
+            if (toHighlight.has(n.id)) {
+              n.classList.add("highlighted");
+              n.classList.remove("dimmed");
+            } else {
+              n.classList.remove("highlighted");
+              n.classList.add("dimmed");
+            }
+          });
+          
+          // Destaca e revela arestas conectadas
+          edgesSvg.forEach(edge => {
+            const [from, to] = getEdgeNodes(edge);
+            if (toHighlight.has(from) && toHighlight.has(to)) {
+              edge.classList.remove("dimmed");
+              edge.style.opacity = "1";
+            } else {
+              edge.style.opacity = "0";
+            }
+          });
+          
+          // Scroll suave para o gráfico
+          document.getElementById('graph').scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'center' 
+          });
+        }
+      }
+
       // Função para extrair o ID de um grupo de nó (ex: "node1")
       function getNodeId(gElement) {
         return gElement.id;
@@ -1885,6 +2635,44 @@
         document.getElementById('fase4-btn').addEventListener('click', () => showHorario(4, 'images/4fase.png'));
         document.getElementById('fase5-btn').addEventListener('click', () => showHorario(5, 'images/5fase.png'));
         showHorario(1, 'images/1fase.png');
+
+        // Funcionalidade da barra de pesquisa de disciplinas
+        const campoPesquisa = document.getElementById('search-disciplina');
+        let timeoutPesquisa = null;
+
+        // Event listener para pesquisa em tempo real com debounce
+        campoPesquisa.addEventListener('input', function(evento) {
+          const termoBusca = evento.target.value;
+          
+          // Limpa timeout anterior para evitar múltiplas buscas
+          if (timeoutPesquisa) {
+            clearTimeout(timeoutPesquisa);
+          }
+          
+          // Executa busca após 300ms de pausa na digitação
+          timeoutPesquisa = setTimeout(() => {
+            const resultados = buscarDisciplinas(termoBusca);
+            exibirResultados(resultados);
+          }, 300);
+        });
+
+        // Limpa resultados ao pressionar ESC
+        document.addEventListener('keydown', function(evento) {
+          if (evento.key === 'Escape') {
+            document.getElementById('search-results').style.display = 'none';
+            campoPesquisa.value = '';
+          }
+        });
+
+        // Fecha resultados ao clicar fora
+        document.addEventListener('click', function(evento) {
+          const containerPesquisa = document.querySelector('.pesquisa-section');
+          const containerResultados = document.getElementById('search-results');
+          
+          if (!containerPesquisa.contains(evento.target) && containerResultados.style.display === 'block') {
+            containerResultados.style.display = 'none';
+          }
+        });
       });
     </script>
 
